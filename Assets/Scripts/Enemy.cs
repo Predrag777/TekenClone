@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
+        Debug.Log("SSSSS   "+collider.tag);
         if (collider.CompareTag("fist"))
         {
             animator.SetTrigger("hit");
