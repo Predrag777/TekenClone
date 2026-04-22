@@ -18,6 +18,12 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("hit");
         health-=10;
         healthControl();//
+
+        if (health <= 0f){
+            Debug.Log("MRTAV");
+            animator.SetTrigger("death");
+        }
+        
     }
 
     void healthControl()
