@@ -4,11 +4,23 @@ public class CombatControl : MonoBehaviour
 {
     Animator animator;
 
+    [Header("Colliders")]
+    public BoxCollider jab;
+    public BoxCollider cross;
+    public BoxCollider highKick;
+    public BoxCollider spinKick;
+
+
     int c=1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        jab.enabled=false;
+        cross.enabled=false;
+        highKick.enabled=false;
+        spinKick.enabled=false;
     }
 
     // Update is called once per frame
@@ -16,6 +28,8 @@ public class CombatControl : MonoBehaviour
     {
         makeAttack();
     }
+
+
 
     void makeAttack()
     {
@@ -35,5 +49,60 @@ public class CombatControl : MonoBehaviour
         {
             animator.SetTrigger("jab");
         }
+    }    
+    
+    
+
+    ///////////////////////////////JAB
+    public void activeAttackJab()
+    {
+        jab.enabled=true;
+    }
+
+    public void deactiveAttackJab()
+    {
+        jab.enabled=false;
+    }
+
+
+
+
+    ///////////////////////////////////Cross
+    public void activeAttackCross()
+    {
+        cross.enabled=true;
+    }
+
+    public void deactiveAttackCross()
+    {
+        cross.enabled=false;
+    }
+
+
+
+
+    //////////////////////////High Kick
+    public void activeAttackHigh()
+    {
+        highKick.enabled=true;
+    }
+
+    public void deactiveAttackHigh()
+    {
+        highKick.enabled=false;
+    }
+
+
+
+
+    //////////////////////////SPIN KICK
+    public void activeAttackSpin()
+    {
+        spinKick.enabled=true;
+    }
+
+    public void deactiveAttackSpin()
+    {
+        spinKick.enabled=false;
     }
 }

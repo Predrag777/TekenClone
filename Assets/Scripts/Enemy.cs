@@ -1,8 +1,9 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health=100f;
+    [SerializeField] Image healthUI;
 
     Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,14 +12,16 @@ public class Enemy : MonoBehaviour
         animator=GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        
-    }*/
 
     public void isHit()
     {
         animator.SetTrigger("hit");
+        health-=10;
+        healthControl();//
+    }
+
+    void healthControl()
+    {
+        healthUI.fillAmount=(health/100f);    /////////
     }
 }

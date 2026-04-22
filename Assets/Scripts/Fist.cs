@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class Fist : MonoBehaviour
 {
+    BoxCollider myCol;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        myCol=GetComponent<BoxCollider>();
+        myCol.enabled=false;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     void OnTriggerEnter(Collider collider)
     {
