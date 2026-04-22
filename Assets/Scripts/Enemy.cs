@@ -17,12 +17,8 @@ public class Enemy : MonoBehaviour
         
     }*/
 
-    void OnTriggerEnter(Collider collider)
+    public void isHit()
     {
-        Debug.Log("SSSSS   "+collider.tag);
-        if (collider.CompareTag("fist"))
-        {
-            animator.SetTrigger("hit");
-        }
+        animator.SetTrigger("hit");
     }
 }
