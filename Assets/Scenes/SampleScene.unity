@@ -422,6 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336e0a5e26ae8d53798089403a41bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatControl
+  jab: {fileID: 2135959468}
+  cross: {fileID: 1133829859}
+  highKick: {fileID: 1441354218}
+  spinKick: {fileID: 1441354218}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

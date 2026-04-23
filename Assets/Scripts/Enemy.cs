@@ -13,6 +13,14 @@ public class Enemy : MonoBehaviour
     }
 
 
+    void LateUpdate()
+    {
+        transform.rotation=Quaternion.Euler(0f,180f,0f);
+
+        Vector3 pos=transform.position;
+        pos.x=1.6f;
+        transform.position=pos;
+    }
     public void isHit()
     {
         animator.SetTrigger("hit");

@@ -9,7 +9,7 @@ public class MoveController : MonoBehaviour
     CharacterController controller;
     Animator animator;
 
-    float verticalVelocity=0f;
+    float verticalVelocity=0f;////
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,19 +25,24 @@ public class MoveController : MonoBehaviour
         makeJump();
     }
 
+    void LateUpdate()
+    {
+        Vector3 pos=transform.position;
+        pos.x=1.6f;
+        transform.position=pos;
+    }
+
     void makeMove()
     {
         float horizontal = 0f;
         if (Input.GetKey(KeyCode.RightArrow)) horizontal = 1f;
-        else if (Input.GetKey(KeyCode.LeftArrow)) horizontal = -1f;
+        else if (Input.GetKey(KeyCode.LeftArrow)) horizontal = -1f;/////////////////////////////////
 
-        animator.SetBool("isMove", horizontal != 0f);
 
-        /*if (horizontal != 0f)
-        {
-            float targetAngle = horizontal > 0f ? 0f : 180f;
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
-        }*/
+        Debug.Log(horizontal);////////////////////////////////////////////
+        animator.SetBool("isMove", horizontal > 0f);
+        animator.SetBool("isBack", horizontal < 0f);
+
 
         Vector3 dir=new Vector3(0f, verticalVelocity, horizontal);
         
