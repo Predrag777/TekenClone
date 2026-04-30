@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         if(enemy.health<=0f) return;
-        makeMove();
+        //makeMove();
     }
 
     void decision()
