@@ -241,7 +241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3abb8d6ed7c8c599c948ca956c622e05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.638432
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3abb8d6ed7c8c599c948ca956c622e05, type: 3}
       propertyPath: m_LocalPosition.y
@@ -734,6 +734,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.1, z: 0}
+--- !u!114 &523774637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523774634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3210388fbd84807847909bf66e1533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  target: {fileID: 0}
 --- !u!1001 &591634693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -791,6 +804,10 @@ PrefabInstance:
       value: Jack
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cb0846623b0b10ec9768a09d1d50582, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cb0846623b0b10ec9768a09d1d50582, type: 3}
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
@@ -808,6 +825,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cb0846623b0b10ec9768a09d1d50582, type: 3}
       insertIndex: -1
       addedObject: {fileID: 523774635}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cb0846623b0b10ec9768a09d1d50582, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 523774637}
   m_SourcePrefab: {fileID: 100100000, guid: 8cb0846623b0b10ec9768a09d1d50582, type: 3}
 --- !u!1 &725276938
 GameObject:

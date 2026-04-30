@@ -11,6 +11,8 @@ public class CombatControl : MonoBehaviour
     public BoxCollider spinKick;
 
 
+    
+
     int c=1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +51,14 @@ public class CombatControl : MonoBehaviour
         {
             animator.SetTrigger("jab");
         }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            animator.SetTrigger("topAttack");///////////////////
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            animator.SetTrigger("pushAttack");//////////////////////////////
+        }
     }    
     
     
@@ -67,6 +77,7 @@ public class CombatControl : MonoBehaviour
 
 
 
+
     ///////////////////////////////////Cross
     public void activeAttackCross()
     {
@@ -77,6 +88,8 @@ public class CombatControl : MonoBehaviour
     {
         cross.enabled=false;
     }
+
+
 
 
 
@@ -105,4 +118,6 @@ public class CombatControl : MonoBehaviour
     {
         spinKick.enabled=false;
     }
+
+
 }

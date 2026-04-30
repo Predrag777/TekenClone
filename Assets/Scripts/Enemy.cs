@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health=100f;
+    public float health=100f;
     [SerializeField] Image healthUI;
 
     Animator animator;
